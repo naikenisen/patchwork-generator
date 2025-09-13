@@ -227,6 +227,30 @@ patchwork-generator_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patchwork-generator.dir/build.make CMakeFiles/patchwork-generator.dir/patchwork-generator_autogen/mocs_compilation.cpp.s
 .PHONY : patchwork-generator_autogen/mocs_compilation.cpp.s
 
+patchworkview.o: patchworkview.cpp.o
+.PHONY : patchworkview.o
+
+# target to build an object file
+patchworkview.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patchwork-generator.dir/build.make CMakeFiles/patchwork-generator.dir/patchworkview.cpp.o
+.PHONY : patchworkview.cpp.o
+
+patchworkview.i: patchworkview.cpp.i
+.PHONY : patchworkview.i
+
+# target to preprocess a source file
+patchworkview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patchwork-generator.dir/build.make CMakeFiles/patchwork-generator.dir/patchworkview.cpp.i
+.PHONY : patchworkview.cpp.i
+
+patchworkview.s: patchworkview.cpp.s
+.PHONY : patchworkview.s
+
+# target to generate assembly for a file
+patchworkview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/patchwork-generator.dir/build.make CMakeFiles/patchwork-generator.dir/patchworkview.cpp.s
+.PHONY : patchworkview.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -247,6 +271,9 @@ help:
 	@echo "... patchwork-generator_autogen/mocs_compilation.o"
 	@echo "... patchwork-generator_autogen/mocs_compilation.i"
 	@echo "... patchwork-generator_autogen/mocs_compilation.s"
+	@echo "... patchworkview.o"
+	@echo "... patchworkview.i"
+	@echo "... patchworkview.s"
 .PHONY : help
 
 

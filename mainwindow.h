@@ -2,13 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui
-{
-    class MainWindow;
-}
-QT_END_NAMESPACE
+class PatchworkView;
+class QPlainTextEdit;
 
 class MainWindow : public QMainWindow
 {
@@ -19,7 +14,10 @@ public:
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    PatchworkView *patchworkView;
+    QPlainTextEdit *titleEdit;
+    QPlainTextEdit *subtitleEdit;
+    // Ui::MainWindow *ui; // Not used
 };
 
 #endif // MAINWINDOW_H

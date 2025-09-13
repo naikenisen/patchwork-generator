@@ -7,6 +7,8 @@ patchwork-generator_autogen/timestamp: \
 	/home/naiken/coding/patchwork-generator/main.cpp \
 	/home/naiken/coding/patchwork-generator/mainwindow.cpp \
 	/home/naiken/coding/patchwork-generator/mainwindow.h \
+	/home/naiken/coding/patchwork-generator/patchworkview.cpp \
+	/home/naiken/coding/patchwork-generator/patchworkview.h \
 	/usr/include/asm-generic/bitsperlong.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -254,6 +256,7 @@ patchwork-generator_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -310,6 +313,7 @@ patchwork-generator_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
@@ -321,19 +325,29 @@ patchwork-generator_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
@@ -388,6 +402,9 @@ patchwork-generator_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
