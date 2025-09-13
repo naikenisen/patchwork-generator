@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/patchwork-generator.dir/mainwindow.cpp.o.d"
   "CMakeFiles/patchwork-generator.dir/patchwork-generator_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/patchwork-generator.dir/patchwork-generator_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/patchwork-generator.dir/patchworkview.cpp.o"
+  "CMakeFiles/patchwork-generator.dir/patchworkview.cpp.o.d"
   "patchwork-generator"
   "patchwork-generator.pdb"
   "patchwork-generator_autogen/mocs_compilation.cpp"

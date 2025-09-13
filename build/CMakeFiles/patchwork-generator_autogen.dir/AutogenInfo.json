@@ -216,7 +216,10 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/usr/share/cmake-3.31/Modules/CMakeParseArguments.cmake"
+		"/usr/share/cmake-3.31/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/naiken/coding/patchwork-generator",
 	"CROSS_CONFIG" : false,
@@ -229,12 +232,25 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/naiken/coding/patchwork-generator/patchworkview.h",
+			"MU",
+			"EWIEGA46WW/moc_patchworkview.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/naiken/coding/patchwork-generator/build/patchwork-generator_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/naiken/coding/patchwork-generator/build/patchwork-generator_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -249,6 +265,7 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport",
 		"/usr/include/c++/14",
 		"/usr/include/x86_64-linux-gnu/c++/14",
 		"/usr/include/c++/14/backward",
@@ -283,7 +300,12 @@
 	"SOURCES" : 
 	[
 		[ "/home/naiken/coding/patchwork-generator/main.cpp", "MU", null ],
-		[ "/home/naiken/coding/patchwork-generator/mainwindow.cpp", "MU", null ]
+		[ "/home/naiken/coding/patchwork-generator/mainwindow.cpp", "MU", null ],
+		[
+			"/home/naiken/coding/patchwork-generator/patchworkview.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
