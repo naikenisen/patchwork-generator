@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+4d4954f3fc547549826a1a4b1812e9c1 CMakeFiles/patchwork-generator_autogen
+3b158aa7db7431ab0d4c93e438262b90 patchwork-generator_autogen/timestamp
