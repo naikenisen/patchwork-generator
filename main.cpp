@@ -1,23 +1,15 @@
-#include "mainwindow.h"
-
 #include <QApplication>
-#include <QLocale>
-#include <QTranslator>
+#include <QMainWindow>
+#include "ui_mainwindow.h" // généré automatiquement par uic à partir de mainwindow.ui
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "qt-patchwork-generator_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
-    }
-    MainWindow w;
-    w.show();
-    return a.exec();
+    QMainWindow window;
+    Ui::MainWindow ui;
+    ui.setupUi(&window); // initialise la fenêtre avec le contenu du .ui
+    window.show();
+
+    return app.exec();
 }

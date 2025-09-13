@@ -1,0 +1,1 @@
+/usr/bin/clang++-14 -g -Xlinker --dependency-file=CMakeFiles/monappli.dir/link.d CMakeFiles/monappli.dir/main.cpp.o -o monappli  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.15 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.15 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.15
