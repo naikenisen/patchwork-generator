@@ -1,3 +1,0 @@
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/monappli.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/edit_cache.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/rebuild_cache.dir

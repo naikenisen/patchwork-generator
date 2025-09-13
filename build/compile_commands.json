@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/naiken/coding/patchwork-generator/build",
-  "command": "/usr/bin/clang++-14 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -g -std=gnu++17 -fPIC -o CMakeFiles/monappli.dir/main.cpp.o -c /home/naiken/coding/patchwork-generator/main.cpp",
-  "file": "/home/naiken/coding/patchwork-generator/main.cpp",
-  "output": "CMakeFiles/monappli.dir/main.cpp.o"
-}
-]
