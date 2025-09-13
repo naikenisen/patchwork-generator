@@ -1,3 +1,16 @@
+# Binaires
+*.o
+*.exe
+*.out
+
+# Dossier de build
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+
+# Logs
+*.log
+
 # Prerequisites
 *.d
 
