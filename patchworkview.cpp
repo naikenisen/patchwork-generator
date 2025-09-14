@@ -8,6 +8,8 @@
 #include <QImage>
 #include <QUrl>
 #include <QtMath>
+#include <QPlainTextEdit>
+#include <QGraphicsProxyWidget>
 #include <QDebug> // Add at the top if not present
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsSceneDragDropEvent>
@@ -85,14 +87,19 @@ private:
     int imageIndex;
 };
 
+// class PatchworkView : contains scene, a pointer to QGraphicsScene
+PatchworkView::PatchworkView(QWidget *parent,
+                             QPlainTextEdit *titleEdit,
+                             QPlainTextEdit *subtitleEdit)
 
-PatchworkView::PatchworkView(QWidget *parent)
-    : QGraphicsView(parent), scene(new QGraphicsScene(this)), margin(10), maxWidth(1000)
+    : QGraphicsView(parent), scene(new QGraphicsScene(this)),
+      margin(10), maxWidth(1000), titleEdit(titleEdit), subtitleEdit(subtitleEdit)
 {
     setAcceptDrops(true);
     setScene(scene);
 }
 
+// Handle drag enter event to accept URLs
 void PatchworkView::dragEnterEvent(QDragEnterEvent *event)
 {
     qDebug() << "dragEnterEvent called";
@@ -106,6 +113,7 @@ void PatchworkView::dragMoveEvent(QDragMoveEvent *event)
         event->acceptProposedAction();
 }
 
+// Handle drop event to add images
 void PatchworkView::dropEvent(QDropEvent *event)
 {
     qDebug() << "Supported formats:" << QImageReader::supportedImageFormats();
@@ -156,6 +164,26 @@ void PatchworkView::arrangePatchwork()
     }
 }
 
+void PatchworkView::drawTitle(QPainter &painter)
+{
+    // Get scene bounding rect
+    QRectF bounds = scene->itemsBoundingRect();
+
+    // Calculate position below the scene
+    int x = bounds.left() + 10;
+    int y = bounds.bottom() + 30;
+
+    // Draw title
+    QFont titleFont("Arial", 18, QFont::Bold);
+    painter.setFont(titleFont);
+    painter.setPen(Qt::black);
+    painter.drawText(x, y, titleEdit->toPlainText());
+
+    // Draw subtitle below title
+    QFont subtitleFont("Arial", 14, QFont::Normal);
+    painter.setFont(subtitleFont);
+    painter.drawText(x, y + 200, subtitleEdit->toPlainText());
+}
 
 void PatchworkView::exportPDF()
 {
@@ -167,6 +195,7 @@ void PatchworkView::exportPDF()
     printer.setOutputFileName(fileName);
     QPainter painter(&printer);
     scene->render(&painter);
+    drawTitle(painter);
 }
 
 void PatchworkView::exportPNG()
@@ -174,10 +203,37 @@ void PatchworkView::exportPNG()
     QString fileName = QFileDialog::getSaveFileName(this, "Export PNG", "", "*.png");
     if (fileName.isEmpty())
         return;
+
     QRectF bounds = scene->itemsBoundingRect();
-    QImage image(bounds.size().toSize(), QImage::Format_ARGB32);
+
+    // If scene is blank, add a placeholder rectangle
+    if (scene->items().isEmpty())
+    {
+        QRectF placeholderRect(0, 0, 300, 300);
+        scene->addRect(placeholderRect, QPen(Qt::gray), QBrush(Qt::lightGray));
+        bounds = placeholderRect;
+    }
+
+    // Ensure minimum size of 300x300 px
+    int minSize = 300;
+    QSize imageSize(qMax(int(bounds.width()), minSize), qMax(int(bounds.height()), minSize));
+
+    QImage image(imageSize, QImage::Format_ARGB32);
+    image.setDotsPerMeterX(300 * 1000 / 25.4);
+    image.setDotsPerMeterY(300 * 1000 / 25.4);
     image.fill(Qt::white);
+
     QPainter painter(&image);
+    painter.setRenderHint(QPainter::Antialiasing);
+
+    // Scale scene to fit image size
+    double scaleX = double(imageSize.width()) / bounds.width();
+    double scaleY = double(imageSize.height()) / bounds.height();
+    painter.scale(scaleX, scaleY);
+
     scene->render(&painter);
-    image.save(fileName);
+    drawTitle(painter);
+
+    bool saved = image.save(fileName);
+    qDebug() << "Export PNG:" << fileName << "Saved:" << saved << "Size:" << imageSize;
 }

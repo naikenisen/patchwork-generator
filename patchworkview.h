@@ -5,12 +5,16 @@
 #include <QGraphicsScene>
 #include <QPixmap>
 #include <QVector>
-
+#include <QPlainTextEdit>
 class PatchworkView : public QGraphicsView
 {
     Q_OBJECT
 public:
-    explicit PatchworkView(QWidget *parent = nullptr);
+    explicit PatchworkView(QWidget *parent = nullptr, QPlainTextEdit *titleEdit = nullptr, QPlainTextEdit *subtitleEdit = nullptr);
+
+private:
+    QPlainTextEdit *titleEdit;
+    QPlainTextEdit *subtitleEdit;
 
 public slots:
     void exportPDF();
@@ -27,6 +31,7 @@ private:
     int margin;
     int maxWidth;
     void arrangePatchwork();
+    void drawTitle(QPainter &painter);
 };
 
 #endif // PATCHWORKVIEW_H
