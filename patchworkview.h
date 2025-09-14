@@ -18,7 +18,9 @@ public slots:
 
 protected:
     void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
     void dropEvent(QDropEvent *event) override;
+    void wheelEvent(QWheelEvent *event) override;
 
 private:
     QGraphicsScene *scene;
