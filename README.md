@@ -1,21 +1,54 @@
 # Patchwork Scientific Figures
 
-**Patchwork Scientific Figures** est une application graphique sous Linux (et multiplateforme) développée en **C++ avec Qt**.  
-Elle permet de créer facilement des figures scientifiques en assemblant plusieurs images (JPEG, PNG) dans une grille (patchwork), et d’y ajouter des titres, légendes et annotations pour publication.
+**Patchwork Scientific Figures** is a cross-platform graphical application (developed in C++ with Qt) designed for creating high-quality, publication-ready scientific figures.  
+
+Unlike general-purpose tools (PowerPoint, LibreOffice Impress) or programming-based workflows (R, Python), this application focuses on **reproducibility, visual consistency, optimal layout, and long-term project archiving**.  
+It is especially useful in biology and related research fields, where figure preparation often relies on non-specialized software.
 
 ---
 
-## Fonctionnalités
+## Features
 
-- Importation de plusieurs images depuis un dossier.
-- Disposition des images en **grille personnalisable**.
-- Ajout de **titres et légendes** pour chaque image ou pour l’ensemble.
-- **repositionnement** des images par glisser-déposer.
-- **Export** du montage final en PNG, JPEG, PDF ou SVG.
-- Sauvegarde et chargement des projets pour modification ultérieure.
+- Import multiple images from a folder (JPEG, PNG).  
+- Arrange images in a customizable grid (patchwork).  
+- Add titles and captions for each image or for the entire figure.  
+- Reposition images easily with drag-and-drop.  
+- Export the final layout to PNG or PDF.  
+- Save and reload projects for future editing (non-destructive workflow).  
 
 ---
 
 ## Installation
 
-1. Installer Qt (Qt 5 recommandé) et un compilateur C++ (GCC)
+### Required packages
+
+- `qttools5-dev`  
+- `qttools5-dev-tools`  
+- `g++` (or another C++ compiler)  
+- `cmake` (recommended for building)  
+
+---
+
+## Usage
+
+1. Launch the application.  
+2. Import images from a folder.  
+3. Arrange the order of figures with drag-and-drop.  
+4. Add title and subtitle
+5. Export as PNG or PDF for publication.  
+6. Save your project for later modifications.  
+
+---
+
+## Development
+
+- **Language:** C++  
+- **Framework:** Qt 5  
+- **Build system:** CMake (recommended)  
+- **Platform:** Linux (tested), cross-platform (Windows/macOS supported via Qt)  
+
+---
+
+## License
+
+[GNU General Public License](LICENSE) – free to use, modify, and distribute.
