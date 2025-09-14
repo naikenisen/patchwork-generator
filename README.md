@@ -3,15 +3,15 @@
 **Patchwork Scientific Figures** is a cross-platform graphical application (developed in C++ with Qt) designed for creating high-quality, publication-ready scientific figures.  
 
 Unlike general-purpose tools (PowerPoint, LibreOffice Impress) or programming-based workflows (R, Python), this application focuses on **reproducibility, visual consistency, optimal layout, and long-term project archiving**.  
-It is especially useful in biology and related research fields, where figure preparation often relies on non-specialized software.
+It is especially useful in biology and related research fields, researchers are not programers and where figure preparation often relies on non-specialized software. Packages such as R cowplot or Python matplotlib packages are gold Standard for datascientist and bioinformaticians but no real UI alternative exist for clinicians and biologists.
 
 ---
 
 ## Features
 
 - Import multiple images from a folder (JPEG, PNG).  
-- Arrange images in a customizable grid (patchwork).  
-- Add titles and captions for each image or for the entire figure.  
+- Automaticaly add pictures to a grid.
+- Add titles and subtiles for the entire figure.  
 - Reposition images easily with drag-and-drop.  
 - Export the final layout to PNG or PDF.  
 - Save and reload projects for future editing (non-destructive workflow).  
