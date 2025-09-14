@@ -16,16 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     QVBoxLayout *layout = new QVBoxLayout(centralWidget);
 
-    patchworkView = new PatchworkView(this);
-    patchworkView->setMinimumSize(1010, 790);
-    layout->addWidget(patchworkView);
-
     titleEdit = new QPlainTextEdit(this);
     titleEdit->setPlaceholderText("Enter title here...");
-    layout->addWidget(titleEdit);
-
     subtitleEdit = new QPlainTextEdit(this);
     subtitleEdit->setPlaceholderText("Enter subtitle here...");
+    patchworkView = new PatchworkView(this, titleEdit, subtitleEdit);
+    patchworkView->setMinimumSize(1010, 790);
+    layout->addWidget(patchworkView);
+    layout->addWidget(titleEdit);
     layout->addWidget(subtitleEdit);
 
     // Menu

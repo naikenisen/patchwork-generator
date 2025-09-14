@@ -8,20 +8,29 @@
 #include <QImage>
 #include <QUrl>
 #include <QtMath>
+#include <QPlainTextEdit>
+#include <QGraphicsProxyWidget>
 
-PatchworkView::PatchworkView(QWidget *parent)
-    : QGraphicsView(parent), scene(new QGraphicsScene(this)), margin(10), maxWidth(1000)
+// class PatchworkView : contains scene, a pointer to QGraphicsScene
+PatchworkView::PatchworkView(QWidget *parent,
+                             QPlainTextEdit *titleEdit,
+                             QPlainTextEdit *subtitleEdit)
+
+    : QGraphicsView(parent), scene(new QGraphicsScene(this)),
+      margin(10), maxWidth(1000), titleEdit(titleEdit), subtitleEdit(subtitleEdit)
 {
     setAcceptDrops(true);
     setScene(scene);
 }
 
+// Handle drag enter event to accept URLs
 void PatchworkView::dragEnterEvent(QDragEnterEvent *event)
 {
     if (event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
+// Handle drop event to add images
 void PatchworkView::dropEvent(QDropEvent *event)
 {
     QList<QUrl> urls = event->mimeData()->urls();
@@ -53,6 +62,24 @@ void PatchworkView::arrangePatchwork()
     }
 }
 
+void PatchworkView::drawTitle(QPainter &painter)
+{
+    // Draw title
+    QFont titleFont = painter.font();
+    titleFont.setPointSize(18);
+    titleFont.setBold(true);
+    painter.setFont(titleFont);
+    painter.setPen(Qt::black);
+    painter.drawText(10, 30, titleEdit->toPlainText());
+
+    // Draw subtitle
+    QFont subtitleFont = painter.font();
+    subtitleFont.setPointSize(14);
+    subtitleFont.setBold(false);
+    painter.setFont(subtitleFont);
+    painter.drawText(10, 60, subtitleEdit->toPlainText());
+}
+
 void PatchworkView::exportPDF()
 {
     QString fileName = QFileDialog::getSaveFileName(this, "Export PDF", "", "*.pdf");
@@ -63,6 +90,7 @@ void PatchworkView::exportPDF()
     printer.setOutputFileName(fileName);
     QPainter painter(&printer);
     scene->render(&painter);
+    drawTitle(painter);
 }
 
 void PatchworkView::exportPNG()
@@ -75,5 +103,6 @@ void PatchworkView::exportPNG()
     image.fill(Qt::white);
     QPainter painter(&image);
     scene->render(&painter);
+    drawTitle(painter);
     image.save(fileName);
 }
