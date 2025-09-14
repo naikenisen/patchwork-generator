@@ -1,6 +1,5 @@
 #ifndef PATCHWORKVIEW_H
 #define PATCHWORKVIEW_H
-
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QPixmap>
@@ -24,7 +23,7 @@ protected:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dragMoveEvent(QDragMoveEvent *event) override;
     void dropEvent(QDropEvent *event) override;
-    
+
 private:
     QGraphicsScene *scene;
     QVector<QPixmap> images;
