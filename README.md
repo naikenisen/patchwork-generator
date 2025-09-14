@@ -49,10 +49,12 @@ Indeed, packages such as **R cowplot or Python matplotlib**, Gold Standards for 
 - **Framework:** Qt 5  
 - **Build system:** qmaker (recommended) : create /build folder then use following commands
 
+```bash
 bash
 qmake ../patchwork-generator.pro
 make
-  
+```
+
 - **Platform:** Linux (tested), cross-platform (Windows/macOS supported via Qt)  
 
 ---
