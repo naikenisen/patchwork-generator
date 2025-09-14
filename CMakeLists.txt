@@ -4,7 +4,6 @@ project(PatchworkGenerator)
 set(CMAKE_CXX_STANDARD 17)
 
 # Active la génération automatique des fichiers UI
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
