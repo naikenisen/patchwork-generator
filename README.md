@@ -2,7 +2,7 @@
 
 **Patchwork Scientific Figures** is a cross-platform graphical application (developed in C++ with Qt) designed for creating high-quality, publication-ready scientific figures.  
 
-Unlike general-purpose tools (PowerPoint, LibreOffice Impress) or programming-based workflows (R, Python), this application focuses on **reproducibility, visual consistency, optimal layout, and long-term project archiving**. 
+Unlike general-purpose tools (PowerPoint, LibreOffice Impress) this application focuses on **reproducibility, visual consistency, optimal layout, and long-term project archiving**. 
 
 It is especially useful in biology and related research fields. When researchers are not programers, figures conception often relies on non-specialized softwares. 
 
