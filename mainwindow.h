@@ -17,7 +17,6 @@ private:
     PatchworkView *patchworkView;
     QPlainTextEdit *titleEdit;
     QPlainTextEdit *subtitleEdit;
-    // Ui::MainWindow *ui; // Not used
 };
 
 #endif // MAINWINDOW_H

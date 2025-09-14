@@ -17,12 +17,11 @@ set(SOURCES
     main.cpp
     mainwindow.cpp
     patchworkview.cpp
-    mainwindow.ui
 )
 
 # Création de l’exécutable
 
-add_executable(patchwork-generator ${SOURCES} patchworkview.h mainwindow.ui)
+add_executable(patchwork-generator ${SOURCES} patchworkview.h)
 
 # Lien avec Qt5 Widgets et PrintSupport
 target_link_libraries(patchwork-generator Qt5::Widgets Qt5::PrintSupport)
