@@ -181,5 +181,3 @@ void PatchworkView::exportPNG()
     scene->render(&painter);
     image.save(fileName);
 }
-
-// void wheelEvent(QWheelEvent *event) override;
