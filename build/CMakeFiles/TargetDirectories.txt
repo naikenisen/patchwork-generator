@@ -1,5 +1,0 @@
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/patchwork-generator.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/edit_cache.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/rebuild_cache.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/patchwork-generator_autogen_timestamp_deps.dir
-/home/naiken/coding/patchwork-generator/build/CMakeFiles/patchwork-generator_autogen.dir
