@@ -8,7 +8,7 @@
 /CMakeFiles/
 /CMakeCache.txt
 .vscode/
-
+patchwork-generator.pro
 # Logs
 *.log
 
